@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "@fontsource/space-grotesk/400.css";
+@import "@fontsource/space-grotesk/700.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+
+@theme {
+  --color-primary: #00f2ff;
+  /* Electric Cyan */
+  --color-primary-dark: #00a3cc;
+  --color-background: #0a0a0a;
+  /* Near Black */
+  --color-surface: #171717;
+  /* Dark Gray */
+  --color-surface-light: #262626;
+  --color-text: #ffffff;
+  --color-text-muted: #a3a3a3;
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px -5px var(--color-primary);
+    }
+
+    to {
+      box-shadow: 0 0 20px 5px var(--color-primary);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply antialiased text-text bg-background font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .bg-grid-white {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500;
+  }
+}
