@@ -1,8 +1,10 @@
-
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronRight, Terminal, Globe, User, MessageCircle, Award, Code } from 'lucide-react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const Hero = () => {
+    const isMobile = useIsMobile();
+
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-20 pb-10">
             {/* Cyber Grid Background */}
@@ -20,7 +22,7 @@ const Hero = () => {
                     {/* Left Content */}
                     <div className="w-full lg:w-1/2 text-center lg:text-left">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8 cursor-pointer hover:border-primary/50 transition-colors group mx-auto lg:mx-0"
@@ -31,9 +33,9 @@ const Hero = () => {
                         </motion.div>
 
                         <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
+                            transition={{ duration: 0.6, delay: isMobile ? 0 : 0.2 }}
                             className="text-5xl md:text-7xl font-bold tracking-tight text-text mb-6 leading-[1.1]"
                         >
                             Empowering <br />
@@ -43,9 +45,9 @@ const Hero = () => {
                         </motion.h1>
 
                         <motion.p
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
+                            transition={{ duration: 0.6, delay: isMobile ? 0 : 0.4 }}
                             className="text-lg md:text-xl text-text-muted mb-10 leading-relaxed font-light max-w-xl mx-auto lg:mx-0"
                         >
                             Join the National Cybersecurity High School Association to drive change,
@@ -53,9 +55,9 @@ const Hero = () => {
                         </motion.p>
 
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.6 }}
+                            transition={{ duration: 0.6, delay: isMobile ? 0 : 0.6 }}
                             className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
                         >
                             <a

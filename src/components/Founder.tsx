@@ -1,8 +1,10 @@
-
 import { motion } from 'framer-motion';
 import { Quote, Sparkles } from 'lucide-react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const Founder = () => {
+    const isMobile = useIsMobile();
+
     return (
         <section id="founder" className="py-24 bg-surface overflow-hidden relative">
             {/* Background Grid */}
@@ -10,7 +12,7 @@ const Founder = () => {
 
             <div className="container mx-auto px-6 relative z-10">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}

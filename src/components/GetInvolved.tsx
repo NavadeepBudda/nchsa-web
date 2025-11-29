@@ -1,6 +1,6 @@
-
 import { motion } from 'framer-motion';
 import { User, School, Star, Users, ArrowRight } from 'lucide-react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const opportunities = [
     {
@@ -34,6 +34,8 @@ const opportunities = [
 ];
 
 const GetInvolved = () => {
+    const isMobile = useIsMobile();
+
     return (
         <section id="get-involved" className="py-24 bg-background relative">
             <div className="container mx-auto px-6">
@@ -48,10 +50,10 @@ const GetInvolved = () => {
                     {opportunities.map((item, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            transition={{ duration: 0.5, delay: isMobile ? 0 : index * 0.1 }}
                             className="group relative bg-surface rounded-2xl p-8 border border-white/5 hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,0,0,0.5)]"
                         >
                             <div className="flex items-start justify-between mb-6">

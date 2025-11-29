@@ -1,8 +1,10 @@
-
 import { motion } from 'framer-motion';
 import { Eye, TrendingUp, History, Globe } from 'lucide-react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const About = () => {
+    const isMobile = useIsMobile();
+
     return (
         <section id="about" className="py-20 bg-surface relative overflow-hidden">
             {/* Background Grid */}
@@ -21,7 +23,7 @@ const About = () => {
 
                     {/* Card 1: Mission */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4 }}
@@ -38,10 +40,10 @@ const About = () => {
 
                     {/* Card 2: Impact */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: 0.1 }}
+                        transition={{ duration: 0.4, delay: isMobile ? 0 : 0.1 }}
                         className="glass p-6 rounded-2xl border border-white/5 hover:border-purple-500/30 transition-all duration-300 group"
                     >
                         <div className="mb-4 p-3 bg-purple-500/10 w-fit rounded-xl group-hover:bg-purple-500/20 transition-colors">
@@ -55,10 +57,10 @@ const About = () => {
 
                     {/* Card 3: Story */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: 0.2 }}
+                        transition={{ duration: 0.4, delay: isMobile ? 0 : 0.2 }}
                         className="glass p-6 rounded-2xl border border-white/5 hover:border-green-500/30 transition-all duration-300 group"
                     >
                         <div className="mb-4 p-3 bg-green-500/10 w-fit rounded-xl group-hover:bg-green-500/20 transition-colors">
@@ -72,10 +74,10 @@ const About = () => {
 
                     {/* Card 4: Network */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: 0.3 }}
+                        transition={{ duration: 0.4, delay: isMobile ? 0 : 0.3 }}
                         className="glass p-6 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-all duration-300 group"
                     >
                         <div className="mb-4 p-3 bg-blue-500/10 w-fit rounded-xl group-hover:bg-blue-500/20 transition-colors">
