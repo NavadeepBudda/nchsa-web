@@ -27,7 +27,7 @@ const About = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4 }}
-                        className="glass p-6 rounded-2xl border border-white/5 hover:border-primary/30 transition-all duration-300 group"
+                        className="glass p-6 rounded-2xl border border-white/5 hover:border-primary/30 transition-all duration-300 group mobile-no-animate"
                     >
                         <div className="mb-4 p-3 bg-primary/10 w-fit rounded-xl group-hover:bg-primary/20 transition-colors">
                             <Eye className="w-6 h-6 text-primary" />
@@ -44,7 +44,7 @@ const About = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: isMobile ? 0 : 0.1 }}
-                        className="glass p-6 rounded-2xl border border-white/5 hover:border-purple-500/30 transition-all duration-300 group"
+                        className="glass p-6 rounded-2xl border border-white/5 hover:border-purple-500/30 transition-all duration-300 group mobile-no-animate"
                     >
                         <div className="mb-4 p-3 bg-purple-500/10 w-fit rounded-xl group-hover:bg-purple-500/20 transition-colors">
                             <TrendingUp className="w-6 h-6 text-purple-500" />
@@ -61,7 +61,7 @@ const About = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: isMobile ? 0 : 0.2 }}
-                        className="glass p-6 rounded-2xl border border-white/5 hover:border-green-500/30 transition-all duration-300 group"
+                        className="glass p-6 rounded-2xl border border-white/5 hover:border-green-500/30 transition-all duration-300 group mobile-no-animate"
                     >
                         <div className="mb-4 p-3 bg-green-500/10 w-fit rounded-xl group-hover:bg-green-500/20 transition-colors">
                             <History className="w-6 h-6 text-green-500" />
@@ -78,7 +78,7 @@ const About = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: isMobile ? 0 : 0.3 }}
-                        className="glass p-6 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-all duration-300 group"
+                        className="glass p-6 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-all duration-300 group mobile-no-animate"
                     >
                         <div className="mb-4 p-3 bg-blue-500/10 w-fit rounded-xl group-hover:bg-blue-500/20 transition-colors">
                             <Globe className="w-6 h-6 text-blue-500" />

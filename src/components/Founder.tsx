@@ -16,7 +16,7 @@ const Founder = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="max-w-4xl mx-auto"
+                    className="max-w-4xl mx-auto mobile-no-animate"
                 >
                     <div className="glass p-8 md:p-12 rounded-3xl border border-white/5 relative overflow-hidden">
                         {/* Decorative Elements */}

@@ -54,7 +54,7 @@ const GetInvolved = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: isMobile ? 0 : index * 0.1 }}
-                            className="group relative bg-surface rounded-2xl p-8 border border-white/5 hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,0,0,0.5)]"
+                            className="group relative bg-surface rounded-2xl p-8 border border-white/5 hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,0,0,0.5)] mobile-no-animate"
                         >
                             <div className="flex items-start justify-between mb-6">
                                 <div className="p-3 bg-white/5 rounded-xl group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary/10">

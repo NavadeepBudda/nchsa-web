@@ -25,7 +25,7 @@ const Hero = () => {
                             initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8 cursor-pointer hover:border-primary/50 transition-colors group mx-auto lg:mx-0"
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8 cursor-pointer hover:border-primary/50 transition-colors group mx-auto lg:mx-0 mobile-no-animate"
                         >
                             <span className="text-xs font-bold text-primary uppercase tracking-wider group-hover:shadow-[0_0_10px_rgba(0,242,255,0.5)] transition-shadow">New</span>
                             <span className="text-sm text-text/80">Join the 2025 Cohort</span>
@@ -36,7 +36,7 @@ const Hero = () => {
                             initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: isMobile ? 0 : 0.2 }}
-                            className="text-5xl md:text-7xl font-bold tracking-tight text-text mb-6 leading-[1.1]"
+                            className="text-5xl md:text-7xl font-bold tracking-tight text-text mb-6 leading-[1.1] mobile-no-animate"
                         >
                             Empowering <br />
                             <span className="text-gradient">
@@ -48,7 +48,7 @@ const Hero = () => {
                             initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: isMobile ? 0 : 0.4 }}
-                            className="text-lg md:text-xl text-text-muted mb-10 leading-relaxed font-light max-w-xl mx-auto lg:mx-0"
+                            className="text-lg md:text-xl text-text-muted mb-10 leading-relaxed font-light max-w-xl mx-auto lg:mx-0 mobile-no-animate"
                         >
                             Join the National Cybersecurity High School Association to drive change,
                             start clubs, and connect with a community of future innovators.
@@ -58,7 +58,7 @@ const Hero = () => {
                             initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: isMobile ? 0 : 0.6 }}
-                            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
+                            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mobile-no-animate"
                         >
                             <a
                                 href="#get-involved"
